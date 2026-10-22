@@ -1,7 +1,7 @@
 from redis.asyncio import Redis
 from .base import LuaLimiter
 
-class SlidingLogLimiter(LuaLimiter):
+class SlidingLog(LuaLimiter):
     script_name = "sliding_log"
 
     def __init__(self, r: Redis, limit: int, window_ms: int):
